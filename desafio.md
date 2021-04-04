@@ -36,4 +36,23 @@ nessa migration devemos ter as colunas:
   done - Boolean,
   deleted - Boolean
 6 - Migrar a tabela tasks para o banco de dados
+executar "yarn sequelize db:migrate"
 
+//Aula 02/02
+Primeira Etapa - Iniciar as models
+executar "yarn sequelize init:models"
+
+Segunda Etapa - Criar a model Task.js na pasta models, com base na propria migration da pasta database\migrations
+
+Terceira Etapa - Criar o controller "TaskController.js" para realizar operações de CRUD das Tasks no banco de dados
+
+
+Quarta etapa - ao dar npm start, dar erro no conig.use_env_variable, na linha 8 comentar o //[env]
+
+Quinta Etapa - na rota Routes/index.js
+  1-remover function da rota '/'
+  1.1- importar controller nevessario para efetuar CRUD da API
+  1.2- adicionar controller e o metodo dentro dele que será processado quando acessamos a rota '/'
+
+
+ 
