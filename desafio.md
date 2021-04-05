@@ -6,16 +6,19 @@ Primeira Etapa - 5 minutos
 
 Segunda Etapa - 10 minutos
 1 - Iniciem um arquivo package.json (através do npm)
-2 - Importar os módulos express, cors
+    comando: "npm init -y"
+2 - Importar o módulo express e o módulo cors
+    comando: "npm i express cors" //quando instala algum modulo, ai aparece a pasta "node_modules"
 3 - Criar um arquivo src/index.js
 4 - Tornar o index.js o servidor
 5 - Startar o servidor
 
 Terceira Etapa - 3 minutos
-1 - Criar a propriedade start no package.json 
-para a aplicação rodar com o comando npm start
-2 - Adicionar na propriedade start o nodemon para que não 
-tenhamos necessidade de ficar atualizando o projeto
+1 - instalar nodemon como devDependency -> "npm i -D nodemon"
+
+2 - Criar a propriedade start no package.json 
+para a aplicação rodar com o comando npm start, da seguinte forma:
+No arquivo "package.json" dentro do parametro "scripts", insira a linha "start": "nodemon ./src/index.js"
 
 Quarta Etapa - 8 minutos
 1 - Criar uma arquivo src/routes/index.js
@@ -53,6 +56,12 @@ Quinta Etapa - na rota Routes/index.js
   1-remover function da rota '/'
   1.1- importar controller nevessario para efetuar CRUD da API
   1.2- adicionar controller e o metodo dentro dele que será processado quando acessamos a rota '/'
+
+
+//Aula 04/02 - 
+1- criar projeto "app-todo-list"
+2- copiar pasta src daqui e colar no novo projeto
+3- continua no projeto "app-todo-list"
 
 
  
