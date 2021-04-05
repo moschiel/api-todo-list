@@ -1,0 +1,1 @@
+Essa pasta com react foi criada com o comando "npx create-react-app <nome-da-pasta>"
