@@ -12,13 +12,13 @@ function TaskForm(){
   let title = "";
   let description = "";
 
-  const handleChangeTitle = (event) => {
-    //setTitle(event.target.value);
-  }
+  // const handleChangeTitle = (event) => {
+  //   //setTitle(event.target.value);
+  // }
 
-  const handleChangeDescription = (event) => {
-    //setDescription(event.target.value);
-  }
+  // const handleChangeDescription = (event) => {
+  //   //setDescription(event.target.value);
+  // }
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -41,7 +41,7 @@ function TaskForm(){
     <form onSubmit={handleSubmit} className="form">
       <input
         id="task-title" 
-        onChange={handleChangeTitle}
+        // onChange={handleChangeTitle}
         //value={title}
         type="text" 
         className="task-input" 
@@ -51,7 +51,7 @@ function TaskForm(){
 
       <input 
         id="task-description"
-        onChange={handleChangeDescription}
+        // onChange={handleChangeDescription}
         //value={description}
         type="text" 
         className="task-input" 
