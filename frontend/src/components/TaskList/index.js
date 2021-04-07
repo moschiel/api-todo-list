@@ -6,6 +6,7 @@ import Task from '../Task';
 import './styles.css';
 
 function TaskList(){
+  console.log('TaskList');
   const { tasks } = useContext(TaskContext);
   
   return (

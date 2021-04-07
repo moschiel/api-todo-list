@@ -6,6 +6,7 @@ import Delete from '@material-ui/icons/Delete';
 import Edit from '@material-ui/icons/Edit';
 
 function Task({ task }){
+  console.log('Task');
   const { removeTask } = useContext(TaskContext);
 
   return (

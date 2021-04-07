@@ -4,10 +4,13 @@ import api from '../service/api'
 export const TaskContext = createContext();
 
 const TaskContextProvider = (props) => {
+  console.log('TaskContextProvider');
+  
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     async function getTasks(){
+      console.log('getTasks');
       try {
         const { data } = await api.get('/');
         setTasks(data);
@@ -19,6 +22,7 @@ const TaskContextProvider = (props) => {
   }, []);
 
   const addTask = async (title, description) => {
+    console.log('addTask');
     try {
       const { data } = await api.post('/', {
         title,
@@ -31,6 +35,7 @@ const TaskContextProvider = (props) => {
   }
 
   const removeTask = async (id) => {
+    console.log('removeTask');
     try {
       await api.delete('/' + id)
       const tasksFiltered = tasks.filter(task => task.id !== id);
@@ -41,6 +46,7 @@ const TaskContextProvider = (props) => {
   }
 
   const clearList = () => {
+    console.log('clearList');
     setTasks([]);
   }
 

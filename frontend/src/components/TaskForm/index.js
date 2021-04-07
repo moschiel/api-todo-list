@@ -4,24 +4,32 @@ import { TaskContext } from '../../context/TaskContext';
 import './styles.css';
 
 function TaskForm(){
+  console.log('TaskForm');
   const { addTask, clearList } = useContext(TaskContext);
 
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  //const [title, setTitle] = useState('');
+  //const [description, setDescription] = useState('');
+  let title = "";
+  let description = "";
 
   const handleChangeTitle = (event) => {
-    setTitle(event.target.value);
+    //setTitle(event.target.value);
   }
 
   const handleChangeDescription = (event) => {
-    setDescription(event.target.value);
+    //setDescription(event.target.value);
   }
   
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log('handleSubmit');
+    //setTitle(document.getElementById('task-title').value);
+    //setDescription(document.getElementById('task-description').value);
+    title = document.getElementById('task-title').value;
+    description = document.getElementById('task-description').value;
     addTask(title, description);
-    setTitle('');
-    setDescription('');
+    //setTitle('');
+    //setDescription('');
   }
 
   const handleClearList = (event) => {
@@ -31,9 +39,10 @@ function TaskForm(){
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      <input 
+      <input
+        id="task-title" 
         onChange={handleChangeTitle}
-        value={title}
+        //value={title}
         type="text" 
         className="task-input" 
         placeholder="Add title..."
@@ -41,8 +50,9 @@ function TaskForm(){
       />
 
       <input 
+        id="task-description"
         onChange={handleChangeDescription}
-        value={description}
+        //value={description}
         type="text" 
         className="task-input" 
         placeholder="Add description..."

@@ -6,18 +6,19 @@ import TaskList from './components/TaskList';
 import './App.css';
 
 function App() {
+  console.log('App');
   return (
-    <TaskContextProvider>
-      <div className="container">
-        <div className="app-wrapper">
-          <Header />
-          <div className="main">
+    <div className="container">
+      <div className="app-wrapper">
+        <Header />
+        <div className="main">
+          <TaskContextProvider>
             <TaskForm />
             <TaskList />
-          </div>
+          </TaskContextProvider>
         </div>
       </div>
-    </TaskContextProvider>
+    </div>
   );
 }
 
